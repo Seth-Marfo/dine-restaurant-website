@@ -251,7 +251,7 @@ button {
     width: 326px;
 }
 
-#event-image {
+.event-image {
     display: none;
     margin-bottom: 40px; 
 }
@@ -305,7 +305,7 @@ button {
     display: block;
 }
 
-#layout {
+.layout {
     background-repeat: no-repeat;
     width: 326px;
     height: 400px;
