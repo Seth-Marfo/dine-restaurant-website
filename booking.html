@@ -26,20 +26,20 @@
     
     <section class="form-section">
       <div class="form-container">
-      <form action="#" id="booking-form">
-        <div id="name-input">
+      <form action="#" class="form-booking" id="booking-form">
+        <div id="name-input-container">
           <input type="text" name="name" id="name" placeholder="Name">
           <small id="name-error-text">This field is required</small>
         </div>
 
-        <div id="email-input">
+        <div id="email-input-container">
           <input type="email" name="email" id="email" placeholder="Email">
           <small id="email-error-text">This field is required</small>
         </div>
         <br>
         
-        <div class="picker" id="date-input-container">
-          <p class="picker-heading" id="date-heading">Pick a date</p>
+        <div class="flex-container" id="date-input-container">
+          <p class="flex-heading date-heading" id="date-heading">Pick a date</p>
           <small id="date-error-text">This field is incomplete</small>
           <div class="form-date">
             <input type="number" name="month" id="month" placeholder="MM">
@@ -48,8 +48,8 @@
           </div>
         </div>
           <br>
-        <div class="picker" id="time-input-container">
-        <p class="picker-heading" id="time-heading">Pick a time</p>
+        <div class="flex-container time-container" id="time-input-container">
+        <p class="flex-heading" id="time-heading">Pick a time</p>
         <small id="time-error-text">This field is incomplete</small>
         <div class="form-time">
           <input type="number" name="hours" id="hours" placeholder="09">

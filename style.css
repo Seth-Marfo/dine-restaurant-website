@@ -1019,7 +1019,7 @@ footer p {
     left: 24px;
 }
 
-.hero-booking-button {
+.main-booking-button {
     background-color: var(--primary-cod-gray);
     border: 1px solid var(--white);
     margin-top: 32px;
@@ -1099,7 +1099,6 @@ footer p {
 }
 
 /* Booking Form Section */
-
 .form-section {
     height: 650px;
     background-color: var(--white);
@@ -1109,7 +1108,7 @@ footer p {
     display: none;
 }
 
-.booking-form {
+.form-booking {
     margin: 0 auto;
     width: 327px;
     height: 585px;
@@ -1119,7 +1118,7 @@ footer p {
     background-color: var(--white);
 }
 
-.booking-form input {
+.form-booking input {
     border: none;
     width: 263px;
     height: 45px;
@@ -1131,7 +1130,7 @@ footer p {
     line-height: 28px;
 }
 
-.booking-form p {
+.form-booking p {
     text-align: left;
     margin-top: 32px;
     margin-left: 32px;
@@ -1141,7 +1140,7 @@ footer p {
     padding-top: 0px;
 }
 
-.booking-form p:last-of-type {
+.form-booking p:last-of-type {
     margin-top: 0;
 }
 
@@ -1243,7 +1242,7 @@ footer p {
 }
 
 @media (min-width: 768px) {
-    .booking-form {
+    .form-booking {
         width: 540px;
         height: 545px;
         margin-top: -230px;
@@ -1265,17 +1264,17 @@ footer p {
         margin-top: 0;
     }   
         
-    .booking-form input {
+    .form-booking input {
         width: 444px;
     }
     
-    .booking-form p {
+    .form-booking p {
         text-align: left;
         margin-top: 32px;
         margin-left: 32px;
     }
 
-    .form-flex-container {
+    .flex-container {
         display: flex;
         justify-content: space-between;
         margin-top: 32px;
