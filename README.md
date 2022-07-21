@@ -30,7 +30,7 @@ incomplete"
 • HTML, CSS and JAVASCRIPT Languages
 
 # Aurthur 
-• Githubd - @Seth-Marfo 
+• Github - @Seth-Marfo 
 
 • Email - seth.marfo@amalitech.org 
 
