@@ -5,6 +5,7 @@ const dayInput = document.getElementById("day");
 const yearInput = document.getElementById("year");
 const minutesInput = document.getElementById("minutes");
 const hoursInput = document.getElementById("hours");
+const reservationButton = document.getElementsByClassName("reservation-button")
 
 const form = document.getElementById("booking-form");
 const nameContainer = document.getElementById("name-input-container");
@@ -46,10 +47,12 @@ plusGuestButton.addEventListener("click", function addGuest() {
 })
 
 
+
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     checkFormInput();
 });
+
 
 function checkFormInput() {
     const nameWert = nameInput.value.trim();
@@ -76,6 +79,7 @@ function checkNameInput(nameWert) {
     else {
         nameContainer.classList.remove("input-error");
         nameErrorText.style.display = "none";
+        nameInput.style.borderBottomColor = "Initial";
     }
 }
 
@@ -89,23 +93,24 @@ function checkEmailInput(emailWert) {
     else {
         emailContainer.classList.remove("input-error");
         emailErrorText.style.display = "none";
+        emailInput.style.borderBottomColor = "Initial";
     }
 }
 
 function checkDateInput(monthWert, dayWert, yearWert) {
-    if (monthWert === "") {
+    if (monthWert === "" || monthWert < 1 || monthWert >= 13) {
         dateContainer.classList.add("input-error");
         dateErrorText.style.display = "block";
         monthInput.style.borderBottomColor = "#B54949";
         dateHeading.style.color = "#B54949";
         monthInput.classList.add("input-placeholder");
-    } if (dayWert === "") {
+    } if (dayWert === "" || dayWert < 1 || dayWert >= 32) {
         dateContainer.classList.add("input-error");
         dateErrorText.style.display = "block";
         dayInput.style.borderBottomColor = "#B54949";
         dateHeading.style.color = "#B54949";
         dayInput.classList.add("input-placeholder");
-    } if (yearWert === "") {
+    } if (yearWert === "" || yearWert < 2022) {
         dateContainer.classList.add("input-error");
         dateErrorText.style.display = "block";
         yearInput.style.borderBottomColor = "#B54949";
@@ -114,18 +119,22 @@ function checkDateInput(monthWert, dayWert, yearWert) {
     } else {
         dateContainer.classList.remove("input-error");
         dateErrorText.style.display = "none";
+        dateHeading.style.color = "Initial";
+        monthInput.style.borderBottomColor = "Initial";
+        dayInput.style.borderBottomColor = "Initial";
+        yearInput.style.borderBottomColor = "Initial";
     }
 }
 
 
 function checkTimeInput(minutesWert, hoursWert) {
-    if (minutesWert === "") {
+    if (minutesWert === "" || minutesWert < 0) {
         timeContainer.classList.add("input-error");
         timeErrorText.style.display = "block";
         minutesInput.style.borderBottomColor = "#B54949";
         timeHeading.style.color = "#B54949";
         minutesInput.classList.add("input-placeholder");
-    } if (hoursWert === "") {
+    } if (hoursWert === "" || hoursWert < 1) {
         timeContainer.classList.add("input-error");
         timeErrorText.style.display = "block";
         hoursInput.style.borderBottomColor = "#B54949";
@@ -134,5 +143,8 @@ function checkTimeInput(minutesWert, hoursWert) {
     } else {
         timeContainer.classList.remove("input-error");
         timeErrorText.style.display = "none";
+        timeHeading.style.color = "Initial";
+        minutesInput.style.borderBottomColor = "Initial";
+        hoursInput.style.borderBottomColor = "Initial";
     }
 }

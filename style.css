@@ -20,6 +20,12 @@
 }
 
 
+.shadow {
+    -webkit-box-shadow: -1px 6px 15px -7px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 6px 15px -7px rgba(0,0,0,0.75);
+    box-shadow: -1px 6px 15px -7px rgba(0,0,0,0.75);
+}
+
 .button-active:hover,
 .button-active:focus {
     background-color: var(--white);
@@ -80,322 +86,334 @@ button {
 /*  MAIN HOMEPAGE */
 
 
-@media (min-width: 768px) {
+@media (min-width: 480px) {
     body {
-        width: 768px;
+        width: 100%;
     }
 }
-.main {
-    height: 748px;
-    background-image: url(./images/homepage/hero-bg-mobile.jpg);
-    position: relative;
-    background-color: var(--black);
+
+@media (min-width: 480px) {
+    .main {
+        height: 748px;
+        background-image: url(./images/homepage/hero-bg-mobile.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        background-color: var(--black);
+    }
+    
+    .main-text {
+        position: absolute;
+        width: 327px;
+        height: 364px;
+        text-align: center;
+        top: 232px;
+        color: var(--white);
+        left: 24px;
+        margin-left: 12%;
+        margin-top: 40px;
+    }
+    
+    .main-button {
+        background-color: var(--primary-cod-gray);
+        border: 1px solid var(--white);
+        margin-top: 32px;
+    }
+    
+    
+    
+    .info-section {
+        height: 1454px;
+        background-color: var(--white);
+    }
+    
+    .info-stripes {
+        display: none;
+    }
+    
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 327px;
+        text-align: center;
+        margin-bottom: 80px;
+        height: 673px;
+    }
+    
+    .info-image {
+        margin-top: -80px;
+        width: 327px;
+        height: 400px;
+        background-repeat: no-repeat;
+        z-index: 8;
+    }
+    
+    #info-image1 {
+        background-image: url(./images/homepage/enjoyable-place-mobile.jpg);
+    
+    }
+    
+    #info-image2 {
+        background-image: url(./images/homepage/locally-sourced-mobile.jpg);
+    }
+    
+    .pattern-divider {
+        width: 80px;
+        margin: 48px auto 39px auto;
+    }
+    
+    .info-title {
+        margin-bottom: 20px;
+        color: var(--secondary-ebony-clay);
+    }
+    
+    .info-content {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: -0.19px;
+        color: var(--secondary-ebony-clay);
+    }
+    
+    
+    
+    .menu-section {
+        background-color: var(--primary-cod-gray);
+        color: var(--white);
+        text-align: center;  
+    }
+    
+    .menu-section .pattern-divider {
+        margin-top: 72px;
+        margin-bottom: 32px;
+    }
+    
+    .menu-card {
+        width: 327px;
+        margin: 30px auto 64px auto;
+    }
+    
+    .menu-intro {
+        margin-bottom: 64px;
+    }
+    
+    .menu-item {
+        border-bottom: 0.5px solid var(--primary-beaver);
+        padding-bottom: 40px;
+        margin-top: 30px;
+    }
+    
+    .menu-display {
+        width: 327px;
+        height: 245px;
+        background-repeat: no-repeat;
+    }
+    
+    
+    #menu-item1 {
+        background-image: url(./images/homepage/salmon-mobile.jpg);
+    }
+    
+    #menu-item2 {
+        background-image: url(./images/homepage/beef-mobile.jpg);
+    }
+    
+    #menu-item3 {
+        background-image: url(./images/homepage/chocolate-mobile.jpg);
+    }
+    
+    .menu-item:last-of-type {
+        padding-bottom: 72px;
+    }
+    
+    .menu-title {
+        padding-bottom: 15px;
+    }
+    
+    .meal-title {
+        padding-top: 28px;
+        padding-bottom: 15px;
+    }
+    
+    .meal-content {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    
+    
+    .event-section {
+        text-align: center;
+        margin-top: 80px;
+        background-color: var(--white);
+        height: 1044px;
+        margin-bottom: -35px;
+    }
+    
+    .event-container {
+        padding-top: 80px;
+    }
+    
+    .event-stripes {
+        display: none;
+    }
+    
+    .event-images {
+        margin-left: 25px;
+        width: 326px;
+    }
+    
+    .event-image {
+        display: none;
+        margin-bottom: 40px; 
+    }
+    
+    .event-list {
+        list-style: none; 
+    }
+    
+    .event-list-item {
+        text-transform: uppercase;
+        margin: 16px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 2px;
+        color: var(--very-dark-gray);
+        opacity: 0.5;
+    }
+    
+    .event-details {
+        display: none;
+        width: 327px;
+        margin: 0 auto;
+        margin-top: 8px;
+    }
+    
+    .event-details h2 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: -0.4px;
+    }
+    
+    .event-details p {
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: -0.19px;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    
+    .event-button {
+        background-color: var(--black);
+        border: none;
+        line-height: 16px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    
+    #event-details-family {
+        display: block;
+    }
+    
+    .layout {
+        background-repeat: no-repeat;
+        width: 326px;
+        height: 400px;
+        margin-left: 3rem;
+    }
+    
+    #event-family {
+        display: block;
+        background-image: url(./images/homepage/family-gathering-mobile.jpg);
+    }
+    
+    #event-special {
+        background-image: url(./images/homepage/special-events-mobile.jpg);
+    }
+    
+    #event-social {
+        background-image: url(./images/homepage/social-events-mobile.jpg);
+    }
+    
+    .event-list-item:hover,
+    .event-list-item:focus {
+        cursor: pointer;
+    }
+    
+    .active {
+        position: relative;
+        margin-bottom: -2px;
+        opacity: 1;
+    }
+    
+    .active::after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        background: var(--primary-beaver);
+        width: 50px;
+        left: 42%;
+        bottom: 0;
+    }
+    
+    .event-details:last-of-type {
+        margin-top: 30px;
+    }
+    
+    
+    
+    .reservation-section {
+        background-image: url(./images/booking/hero-bg-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: var(--black);
+        height: 328px;
+        text-align: center;
+    }
+    
+    .reservation-section h1 {
+        font-weight: 600;
+        color: var(--white);
+        padding-top: 80px;
+    }
+    
+    .reservation-section button {
+        border: solid var(--white) 1px;
+        background-color: transparent;
+        line-height: 16px;
+        margin-top: 30px;
+        margin-bottom: 100px;
+    }
+    
+    
+    footer {
+        color: var(--white);
+        text-align: center;
+        height: 440px;
+    }
+    
+    footer img {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+    
+    footer p:first-of-type {
+        padding-bottom: 40px;
+    }
+    
+    footer p {
+        text-transform: uppercase;
+        line-height: 28px;
+        letter-spacing: 2px;
+        font-size: 14px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
-.main-text {
-    position: absolute;
-    width: 327px;
-    height: 364px;
-    text-align: center;
-    top: 232px;
-    color: var(--white);
-    left: 24px;
-}
-
-.main-button {
-    background-color: var(--primary-cod-gray);
-    border: 1px solid var(--white);
-    margin-top: 32px;
-}
-
-
-
-.info-section {
-    height: 1454px;
-    background-color: var(--white);
-}
-
-.info-stripes {
-    display: none;
-}
-
-.info-card {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 327px;
-    text-align: center;
-    margin-bottom: 80px;
-    height: 673px;
-}
-
-.info-image {
-    margin-top: -80px;
-    width: 327px;
-    height: 400px;
-    background-repeat: no-repeat;
-}
-
-#info-image1 {
-    background-image: url(./images/homepage/enjoyable-place-mobile.jpg);
-
-}
-
-#info-image2 {
-    background-image: url(./images/homepage/locally-sourced-mobile.jpg);
-}
-
-.pattern-divider {
-    width: 80px;
-    margin: 48px auto 39px auto;
-}
-
-.info-title {
-    margin-bottom: 20px;
-    color: var(--secondary-ebony-clay);
-}
-
-.info-content {
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25px;
-    letter-spacing: -0.19px;
-    color: var(--secondary-ebony-clay);
-}
-
-
-
-.menu-section {
-    background-color: var(--primary-cod-gray);
-    color: var(--white);
-    text-align: center;  
-}
-
-.menu-section .pattern-divider {
-    margin-top: 72px;
-    margin-bottom: 32px;
-}
-
-.menu-card {
-    width: 327px;
-    margin: 30px auto 64px auto;
-}
-
-.menu-intro {
-    margin-bottom: 64px;
-}
-
-.menu-item {
-    border-bottom: 0.5px solid var(--primary-beaver);
-    padding-bottom: 40px;
-    margin-top: 30px;
-}
-
-.menu-display {
-    width: 327px;
-    height: 245px;
-    background-repeat: no-repeat;
-}
-
-
-#menu-item1 {
-    background-image: url(./images/homepage/salmon-mobile.jpg);
-}
-
-#menu-item2 {
-    background-image: url(./images/homepage/beef-mobile.jpg);
-}
-
-#menu-item3 {
-    background-image: url(./images/homepage/chocolate-mobile.jpg);
-}
-
-.menu-item:last-of-type {
-    padding-bottom: 72px;
-}
-
-.menu-title {
-    padding-bottom: 15px;
-}
-
-.meal-title {
-    padding-top: 28px;
-    padding-bottom: 15px;
-}
-
-.meal-content {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-
-
-.event-section {
-    text-align: center;
-    margin-top: 80px;
-    background-color: var(--white);
-    height: 1044px;
-    margin-bottom: -35px;
-}
-
-.event-container {
-    padding-top: 80px;
-}
-
-.event-stripes {
-    display: none;
-}
-
-.event-images {
-    margin-left: 25px;
-    width: 326px;
-}
-
-.event-image {
-    display: none;
-    margin-bottom: 40px; 
-}
-
-.event-list {
-    list-style: none; 
-}
-
-.event-list-item {
-    text-transform: uppercase;
-    margin: 16px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 28px;
-    letter-spacing: 2px;
-    color: var(--very-dark-gray);
-    opacity: 0.5;
-}
-
-.event-details {
-    display: none;
-    width: 327px;
-    margin: 0 auto;
-    margin-top: 8px;
-}
-
-.event-details h2 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 40px;
-    letter-spacing: -0.4px;
-}
-
-.event-details p {
-    font-size: 15px;
-    line-height: 25px;
-    letter-spacing: -0.19px;
-    font-weight: 400;
-    margin-top: 10px;
-}
-
-.event-button {
-    background-color: var(--black);
-    border: none;
-    line-height: 16px;
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-
-#event-details-family {
-    display: block;
-}
-
-.layout {
-    background-repeat: no-repeat;
-    width: 326px;
-    height: 400px;
-}
-
-#event-family {
-    display: block;
-    background-image: url(./images/homepage/family-gathering-mobile.jpg);
-}
-
-#event-special {
-    background-image: url(./images/homepage/special-events-mobile.jpg);
-}
-
-#event-social {
-    background-image: url(./images/homepage/social-events-mobile.jpg);
-}
-
-.event-list-item:hover,
-.event-list-item:focus {
-    cursor: pointer;
-}
-
-.active {
-    position: relative;
-    margin-bottom: -2px;
-    opacity: 1;
-}
-
-.active::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    background: var(--primary-beaver);
-    width: 50px;
-    left: 42%;
-    bottom: 0;
-}
-
-.event-details:last-of-type {
-    margin-top: 30px;
-}
-
-
-
-.reservation-section {
-    background-image: url(./images/booking/hero-bg-mobile.jpg);
-    background-color: var(--black);
-    height: 328px;
-    text-align: center;
-}
-
-.reservation-section h1 {
-    font-weight: 600;
-    color: var(--white);
-    padding-top: 80px;
-}
-
-.reservation-section button {
-    border: solid var(--white) 1px;
-    background-color: transparent;
-    line-height: 16px;
-    margin-top: 30px;
-    margin-bottom: 100px;
-}
-
-
-footer {
-    color: var(--white);
-    text-align: center;
-    height: 440px;
-}
-
-footer img {
-    padding-top: 80px;
-    padding-bottom: 40px;
-}
-
-footer p:first-of-type {
-    padding-bottom: 40px;
-}
-
-footer p {
-    text-transform: uppercase;
-    line-height: 28px;
-    letter-spacing: 2px;
-    font-size: 14px;
-    padding-left: 24px;
-    padding-right: 24px;
-}
 
 
 
@@ -406,16 +424,19 @@ footer p {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .main {
         height: 992px;
         background-image: url(./images/homepage/hero-bg-tablet.jpg);
+        background-size: cover;
     }
 
     .main-text {
         width: 573px;
         left: 97px;
         top: 374px; 
+        margin-left: 16%;
+        margin-top: 100px;
     }
 
     .main-subtitle {
@@ -433,7 +454,7 @@ footer p {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .info-section {
         position: relative;
         height: 1490px;
@@ -443,7 +464,7 @@ footer p {
         display: block;
         position: absolute;
         z-index: 10;
-        right: 40px;
+        right: 190px;
         bottom: 480px;
     }
 
@@ -517,13 +538,8 @@ footer p {
     }
 }
 
-@media (min-width: 1024px) {
 
-}
-
-
-
-@media (min-width: 768px) { 
+@media (min-width: 1024px) { 
     .menu-card {
         width: 573px;
     }
@@ -609,17 +625,22 @@ footer p {
 
 
 
-@media (min-width: 768px) {  
+@media (min-width: 1024px) {  
     .event-section {
         position: relative;
     }
 
-    #layout {
+    .layout {
         position: relative;
         width: 573px;
         height: 360px;
-        z-index: 200;
+        margin-left: 50%;
     }
+    
+    .event-image {
+        display: none;
+        margin-bottom: 40px; 
+    } 
 
     .event-images {
         margin-bottom: 40px;
@@ -642,8 +663,9 @@ footer p {
     .event-stripes {
         display: block;
         position: absolute;
-        left: 39px;
-        top: -40px;
+        left: 13rem;
+        bottom: 58rem;
+        z-index: 10;
     }
 
     .event-list {
@@ -690,7 +712,7 @@ footer p {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .reservation-section {
         background-image: url(./images/booking/hero-bg-tablet.jpg);
         height: 272px;
@@ -707,7 +729,7 @@ footer p {
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     footer {
         display: flex;
         justify-content: center;
@@ -743,12 +765,14 @@ footer p {
     .main {
         height: 820px;
         background-image: url(./images/homepage/hero-bg-desktop.jpg);
+        background-size: cover;
     }
 
     .main-text {
         left: 165px;
         top: 258px;
         text-align: left; 
+        margin: 0 auto;
     }
 
     .main-text img {
@@ -885,8 +909,8 @@ footer p {
 
     .event-stripes {
         z-index: 20;
-        left: 120px;
-        top: 106px;
+        left: 12rem;
+        top: 6rem;
     }
 
     .event-container {
@@ -898,6 +922,9 @@ footer p {
         grid-column-gap: 65px;
         height: 600px;
         margin-top: 60px;   
+    }
+    .layout {
+        margin-left: 2rem;
     }
 
     .event-images {
@@ -1004,8 +1031,10 @@ footer p {
 
 .main-booking-section {
     height: 600px;
-    width: 375px;
+    width: 100%;
     background-image: url(./images/booking/hero-bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -1017,21 +1046,25 @@ footer p {
     top: 56px;
     color: var(--white);
     left: 24px;
+    margin-left: 12%;
 }
 
 .main-booking-button {
     background-color: var(--primary-cod-gray);
     border: 1px solid var(--white);
     margin-top: 32px;
+    background-color: transparent;
 }
 
 
 
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .main-booking-section {
-        width: 768px;
+        width: 100%;
         background-image: url(./images/booking/hero-bg-tablet.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     
     .main-booking-text {
@@ -1070,8 +1103,10 @@ footer p {
 
 @media (min-width: 1440px) {
     .main-booking-section {
-        width: 1440px;
+        width: 100%;
         background-image: url(./images/booking/hero-bg-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     
     .main-booking-text {
@@ -1156,7 +1191,7 @@ footer p {
 }
 
 .form-date input:last-of-type {
-    width: 88px;
+    width: 80px;
 }
 
 .input-error {
@@ -1241,7 +1276,7 @@ footer p {
     font-weight: 400;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .form-booking {
         width: 540px;
         height: 545px;
@@ -1363,7 +1398,7 @@ footer p {
     .form-stripes {
         position: absolute;
         top: 165px;
-        left: 665px;
+        left: 800px;
         z-index: 0;
         display: block;
     }
